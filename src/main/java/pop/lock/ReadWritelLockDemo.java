@@ -43,7 +43,7 @@ public class ReadWritelLockDemo {
          */
     }
 
-    public static final Object put(String key, Object value){
+    public static final  Object put(String key, Object value){
 
         write.lock();
 
