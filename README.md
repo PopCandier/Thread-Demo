@@ -82,11 +82,11 @@ static final class Node {
 * 新的线程封装成Node节点，追加到同步队列中，设置prev节点以及修改当前节点的前置节点指向自己，组成新的链条
 * 通过CAS将tail重新指向新的尾部节点。
 
-![1561973693680](C:\Users\范凌轩\AppData\Roaming\Typora\typora-user-images\1561973693680.png)
+![1561973693680](https://github.com/PopCandier/Thread-Demo/blob/master/images/1561973693680.png)
 
 首先呢，head节点表示已经获得锁的节点，当头节点释放同步状态的时候，会唤醒后续节点获得锁，比唤醒的锁将会把自己设置为节点。
 
-![1561973774512](C:\Users\范凌轩\AppData\Roaming\Typora\typora-user-images\1561973774512.png)
+![1561973774512](https://github.com/PopCandier/Thread-Demo/blob/master/images/1561973774512.png)
 
 * 修改head节点，指向下一个获得锁的节点
 * 新获得锁的节点，将prev的指向null，并且之前离开队列的节点的next也为null
@@ -97,7 +97,7 @@ static final class Node {
 
 AQS作为一个同步工具，在juc中用到的地方非常多。
 
-![1561976019636](C:\Users\范凌轩\AppData\Roaming\Typora\typora-user-images\1561976019636.png)
+![1561976019636](https://github.com/PopCandier/Thread-Demo/blob/master/images/1561976019636.png)
 
 所谓的Lock，其实调用的是底层Sync的Lock
 
