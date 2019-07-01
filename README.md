@@ -246,7 +246,7 @@ private Node enq(final Node node) {
 
 首先，这是第一次循环的同步队列的样子
 
-![1561989334765](C:\Users\99405\AppData\Roaming\Typora\typora-user-images\1561989334765.png)
+![1561989334765](https://github.com/PopCandier/Thread-Demo/blob/master/images/1561989334765.png)
 
 很显然，第一次循环刚好初始化好了这个列表，即便这里面是个空的Node
 
@@ -256,7 +256,7 @@ private Node enq(final Node node) {
 
 接着第二次循环
 
-![1561989909176](C:\Users\99405\AppData\Roaming\Typora\typora-user-images\1561989909176.png)
+![1561989909176](https://github.com/PopCandier/Thread-Demo/blob/master/images/1561989909176.png)
 
 这样，就相当于初始化完成，并且返回这个节点
 
